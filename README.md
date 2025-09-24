@@ -1,1 +1,7 @@
-# ephemeral_state_codelab
+Codelab Flutter ini membahas dua cara pengelolaan state: Ephemeral State menggunakan StatefulWidget dan App State menggunakan scoped_model. Ephemeral State menyimpan data langsung di widget menggunakan setState(), sehingga hanya berlaku di widget tersebut dan hilang ketika widget dibuang. Pendekatan ini cocok untuk state kecil dan lokal, seperti counter atau input sederhana.
+
+Sebaliknya, App State Management dengan scoped_model menyimpan data di model global yang dapat diakses banyak widget. Dengan memanggil notifyListeners(), semua widget yang mendengarkan model akan otomatis diperbarui. Cara ini cocok untuk state besar atau lintas halaman, seperti status login pengguna, isi keranjang belanja, dan pengaturan aplikasi.
+
+Dari observasi kedua proyek terlihat bahwa Ephemeral State sederhana untuk kasus kecil, tetapi sulit dikelola di aplikasi besar karena data harus dioper manual antar widget. App State Management menyederhanakan aliran data, menjaga konsistensi di seluruh aplikasi, mengurangi kode berulang, dan memudahkan pengujian maupun pemeliharaan kode.
+
+Kesimpulannya, Ephemeral State cocok untuk pengelolaan state kecil di satu widget, sedangkan App State Management lebih tepat untuk aplikasi kompleks dengan banyak widget yang membutuhkan state sama. Pendekatan ini memungkinkan fitur seperti autentikasi pengguna, keranjang belanja, dan pengaturan aplikasi berjalan stabil dan efisien.
